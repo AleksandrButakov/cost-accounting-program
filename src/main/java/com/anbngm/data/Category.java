@@ -15,12 +15,14 @@ public enum Category {
         return description;
     }
 
+    /*
     public static Category findCategory(String description) {
         return Arrays.stream(values())
                 .filter(category -> category.getDescription().equals(description))
                 .findFirst()
                 .orElseThrow();
-
     }
+
+     */
 
 }
