@@ -34,7 +34,31 @@ public class Main {
             //stmt.executeQuery("INSERT INTO account VALUES (2, 5, 60)");
 
 
-            String sql = "INSERT INTO account (name, value) VALUES ('hjkhk', 892)";
+            String sql = "INSERT INTO account (name, value) VALUES ('Maik', 8000)";
+            /*
+              String sql = " insert into users (first_name, last_name, date_created, is_admin, num_points)"
+                + " values (?, ?, ?, ?, ?)";
+             PreparedStatement preparedStmt = conn.prepareStatement(sql);
+              preparedStmt.setString (1, s.first_name);
+              preparedStmt.setString (2, s.last_name);
+              preparedStmt.setDate   (3, s.date_created);
+              preparedStmt.setBoolean(4, s.is_admin);
+              preparedStmt.setInt    (5, s.num_points);
+
+
+              Catch any SQL exceptions that may come up during the process.
+
+              catch (Exception e)
+              {
+              System.err.println("Got an exception!");
+              // printStackTrace method
+              // prints line numbers + call stack
+              e.printStackTrace();
+              // Prints what exception has been thrown
+              System.out.println(e);
+              }
+             */
+
             PreparedStatement preparedStmt = con.prepareStatement(sql);
             preparedStmt.execute();
 

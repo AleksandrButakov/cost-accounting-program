@@ -15,12 +15,6 @@ public enum DataSourceProvider {
     private static Statement stmt;
     private static ResultSet rs;
 
-
-
-
-
-
-
     Connection dbConn = null;
 
     public Connection getDbConnection() throws ClassNotFoundException, SQLException {
