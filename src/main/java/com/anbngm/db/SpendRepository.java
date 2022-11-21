@@ -1,7 +1,10 @@
 package com.anbngm.db;
 
-public interface SpendRepository {
+import com.anbngm.entity.SpendEntity;
 
-    
+import javax.swing.*;
+
+public interface SpendRepository {
+    JList<SpendEntity> getAll();
 
 }
