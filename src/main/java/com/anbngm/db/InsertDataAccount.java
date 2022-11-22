@@ -11,7 +11,6 @@ public class InsertDataAccount {
             dbConn = DataSourceProvider.INSTANCE.getDbConnection(dbConn);
         }
 
-
         try {
             String sql = "INSERT INTO account (name, value) VALUES (?, ?)";
             // PreparedStatement preparedStmt = dbConn.prepareStatement(sql);
