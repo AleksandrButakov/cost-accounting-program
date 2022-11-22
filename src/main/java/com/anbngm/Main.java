@@ -33,8 +33,12 @@ public class Main {
             // rs = stmt.executeQuery("SELECT COUNT(*) FROM qa_guru_keeper.accounts");
             //stmt.executeQuery("INSERT INTO account VALUES (2, 5, 60)");
 
+            String sql = "INSERT INTO account (name, value) VALUES (?, ?)";
+            PreparedStatement preparedStmt = con.prepareStatement(sql);
+            preparedStmt.setString(1, "Ivan");
+            preparedStmt.setDouble(2,155.22);
+            preparedStmt.execute();
 
-            String sql = "INSERT INTO account (name, value) VALUES ('Maik', 8000)";
             /*
               String sql = " insert into users (first_name, last_name, date_created, is_admin, num_points)"
                 + " values (?, ?, ?, ?, ?)";
@@ -58,10 +62,6 @@ public class Main {
               System.out.println(e);
               }
              */
-
-            PreparedStatement preparedStmt = con.prepareStatement(sql);
-            preparedStmt.execute();
-
 
             /*
             while (rs.next()) {
