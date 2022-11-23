@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 public class InsertDataAccount {
     private static Connection dbConn = null;
+
     public static void insertDataAccount(String name, double value) throws SQLException, ClassNotFoundException {
         if (dbConn == null) {
             dbConn = DataSourceProvider.INSTANCE.getDbConnection(dbConn);
