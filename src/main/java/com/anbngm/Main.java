@@ -1,8 +1,6 @@
 package com.anbngm;
 
 import com.anbngm.db.AccountRepository;
-import com.anbngm.db.DataSourceProvider;
-import com.anbngm.db.InsertDataAccount;
 import com.anbngm.db.impl.MysqlAccountRepository;
 import com.anbngm.entity.AccountEntity;
 
@@ -24,8 +22,14 @@ public class Main {
                 .setName(accountName)
                 .setValue(balance);
 
-        accountRepository.addAccount(account);
+        for (int i = 1; i < 11; i++) {
+            accountRepository.addAccount(account);
+        }
 
+        //MysqlAccountRepository.closeDbConn();
+
+        // delete row
+        // DELETE FROM `qa_guru_keeper`.`account` WHERE (`id` = '58');
 
 //        try {
 //            String sql = "INSERT INTO account (name, value) VALUES (?, ?)";
